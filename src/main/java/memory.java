@@ -1,16 +1,24 @@
 public class memory {
-    public memory(int i, int i1, String add) {
+
+    private int first;
+    private int second;
+    private String operation;
+
+    public memory(int first, int second, String operation) {
+        this.first = first;
+        this.second = second;
+        this.operation = operation;
     }
 
     public int getFirst() {
-        return 0;
+        return first;
     }
 
     public int getSecond() {
-        return 0;
+        return second;
     }
 
     public String getOperation() {
-        return "";
+        return operation;
     }
 }
