@@ -18,5 +18,29 @@ public class operationsTest {
         assertEquals(33002, result);
     }
 
+    @Test
+    void testMult(){
+        int result = op.mult(22,10);
+        assertEquals(220, result);
+    }
+
+    @Test
+    void testDiv() {
+        int result = op.div(220,10);
+        assertEquals(22,result);
+    }
+
+    @Test
+    void testPow() {
+        int result = op.pow(10,2);
+        assertEquals(100, result);
+    }
+
+    @Test
+    void testRad() {
+        int result = op.rad(100,2);
+        assertEquals(10,result);
+    }
+
 
 }
