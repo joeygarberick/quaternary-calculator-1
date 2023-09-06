@@ -21,4 +21,16 @@ public class memory {
     public String getOperation() {
         return operation;
     }
+
+    public void clearMemory(){
+        first = 0;
+        second = 0;
+        operation = "";
+    }
+
+    public void setMemory(int first, int second, String operation) {
+        this.first = first;
+        this.second = second;
+        this.operation = operation;
+    }
 }
