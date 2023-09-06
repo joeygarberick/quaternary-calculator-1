@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="conversionTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-06T22:52:57" hostname="yabetss-air.dhcp.bsu.edu" time="0.008">
+  <properties/>
+  <testcase name="base10To4UpperBoundsTest()" classname="conversionTests" time="0.005"/>
+  <testcase name="base4to10UpperBoundsTest()" classname="conversionTests" time="0.0"/>
+  <testcase name="base4To10Test()" classname="conversionTests" time="0.001"/>
+  <testcase name="base10To4LowerBoundsTest()" classname="conversionTests" time="0.0"/>
+  <testcase name="base10To4Test()" classname="conversionTests" time="0.001"/>
+  <testcase name="base4To10LowerBoundsTest()" classname="conversionTests" time="0.0"/>
+  <system-out><![CDATA[
+
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
