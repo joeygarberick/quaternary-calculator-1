@@ -27,7 +27,17 @@ public class conversionTests {
             con.convert10To4(655359);
             fail("No exception thrown");
         } catch (inputBoundException e) {
-            System.out.println("");
+            System.out.println();
+        }
+    }
+
+    @Test
+    void base10To4LowerBoundsTest(){
+        try{
+            con.convert10To4(-1);
+            fail("No exception Thrown");
+        } catch (inputBoundException e) {
+            System.out.println();
         }
     }
 
@@ -37,7 +47,17 @@ public class conversionTests {
             con.convert4To10(2133333333);
             fail("No exception thrown");
         } catch (inputBoundException e) {
-            System.out.println("");
+            System.out.println();
+        }
+    }
+
+    @Test
+    void base4To10LowerBoundsTest(){
+        try {
+            con.convert4To10(-1);
+            fail("No exception thrown");
+        } catch (inputBoundException e) {
+            System.out.println();
         }
     }
 
