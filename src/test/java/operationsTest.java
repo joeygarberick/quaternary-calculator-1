@@ -31,8 +31,8 @@ public class operationsTest {
     }
 
     @Test
-    void testPow() {
-        int result = op.pow(10,2);
+    void testPow() throws inputBoundException {
+        int result = op.pow(10);
         assertEquals(100, result);
     }
 
