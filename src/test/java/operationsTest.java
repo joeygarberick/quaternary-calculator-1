@@ -6,7 +6,7 @@ public class operationsTest {
     operations op = new operations();
 
     @Test
-    void subtractionTest(){
+    void subtractionTest() throws inputBoundException {
         int result = op.subt(3002,1113);
         assertEquals(1223, result);
     }
