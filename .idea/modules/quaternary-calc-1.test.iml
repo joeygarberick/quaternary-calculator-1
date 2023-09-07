@@ -12,6 +12,13 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="quaternary-calc-1.main" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:mac-aarch64:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:mac-aarch64:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:mac-aarch64:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:18.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:mac-aarch64:18.0.1" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.8.1" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.8.1" level="project" />
     <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
