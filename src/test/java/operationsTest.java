@@ -13,7 +13,7 @@ public class operationsTest {
 
 
     @Test
-    void testAddition(){
+    void testAddition() throws inputBoundException {
         int result = op.add(22310,10032);
         assertEquals(33002, result);
     }
