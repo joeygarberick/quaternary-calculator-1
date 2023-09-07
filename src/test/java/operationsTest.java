@@ -19,13 +19,13 @@ public class operationsTest {
     }
 
     @Test
-    void testMult(){
+    void testMult() throws inputBoundException {
         int result = op.mult(22,10);
         assertEquals(220, result);
     }
 
     @Test
-    void testDiv() {
+    void testDiv() throws inputBoundException {
         int result = op.div(220,10);
         assertEquals(22,result);
     }
@@ -37,7 +37,7 @@ public class operationsTest {
     }
 
     @Test
-    void testRad() {
+    void testRad() throws inputBoundException{
         int result = op.rad(100,2);
         assertEquals(10,result);
     }
