@@ -24,8 +24,13 @@ public class operations {
         return Conversion.convert10To4(multiplied);
     }
 
-    public int div(int i, int i1) {
-        return 0;
+    public int div(int i, int i1)  throws inputBoundException{
+        conversion Conversion = new conversion();
+        int decimal1 = Conversion.convert4To10(i);
+        int decimal2 = Conversion.convert4To10(i1);
+        int division = decimal / decimal2;
+        
+        return Conversion.convert10To4(division);
     }
 
     public int pow(int i) throws inputBoundException {
@@ -36,7 +41,11 @@ public class operations {
         return Conversion.convert10To4(squared);
     }
 
-    public int rad(int i, int i1) {
-        return 0;
+    public int rad(int i, int i1) throws inputBoundException {
+        conversion Conversion = new conversion(0);
+        int decimal = Conversion.convert10To4(i);
+        int squareRoot = (int) Math.sqrt(decimal);
+        
+        return Conversion.convert10To4(squareRoot);
     }
 }
