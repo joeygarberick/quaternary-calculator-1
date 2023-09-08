@@ -22,7 +22,6 @@ public class GUI extends Application{
     Button threeBtn = new Button("3");
     Text displayArea = new Text("");
 
-
     Button addBtn = new Button("+");
     Button subBtn = new Button("-");
     Button mulBtn = new Button("x");
@@ -31,13 +30,14 @@ public class GUI extends Application{
     Button clearBtn = new Button("CLEAR");
     Button powBtn = new Button("x²");
     Button sqrtBtn = new Button("√");
+    Button toggleBtn = new Button("Toggle");
+    boolean toggle = false;
     memory mem = new memory(-1,-1,"");
     operations opp = new operations();
     conversion conv = new conversion();
     public static void main(String[] args) {
         launch(args);
     }
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -51,7 +51,7 @@ public class GUI extends Application{
         createBorder(grid);
         Scene scene = new Scene(grid,500, 500);
 
-        addEventListener(zeroBtn,oneBtn,twoBtn,threeBtn,addBtn,subBtn,mulBtn,divBtn,powBtn,sqrtBtn,clearBtn,eqBtn);
+        addEventListener(zeroBtn,oneBtn,twoBtn,threeBtn,addBtn,subBtn,mulBtn,divBtn,powBtn,sqrtBtn,clearBtn,eqBtn,toggleBtn);
 
 
         primaryStage.setMaximized(true);
@@ -64,7 +64,6 @@ public class GUI extends Application{
             button.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> handleButtonClick(button.getText()));
         }
     }
-
     private void handleButtonClick(String buttonText) {
         if (mem.getOperation().isEmpty() && opp.isNumeric(buttonText)) {
             appendToDisplay(buttonText);
@@ -79,6 +78,8 @@ public class GUI extends Application{
             handleEqualsButtonClick();
         } else if (buttonText.equals("CLEAR")) {
             clearMemoryAndDisplay();
+        }else if(buttonText.equals("Toggle")){
+            handleToggleButtonClick(toggle = !toggle);
         }
     }
 
@@ -93,6 +94,27 @@ public class GUI extends Application{
     private void handleOperatorButtonClick(String operator) {
         mem.setMemory(Integer.parseInt(displayArea.getText()), -1, operator);
         displayArea.setText("");
+    }
+
+    private  void handleToggleButtonClick(boolean mode) {
+        if(mode){
+            try{
+                int parsedDisplayArea = Integer.parseInt(displayArea.getText());
+                int decimal = conv.convert4To10(parsedDisplayArea);
+                displayArea.setText(String.valueOf(decimal));
+            }catch (inputBoundException e){
+                throw new RuntimeException(e);
+            }
+        }else{
+            try{
+                int parsedDisplayArea = Integer.parseInt(displayArea.getText());
+                int quant = conv.convert10To4(parsedDisplayArea);
+                displayArea.setText(String.valueOf(quant));
+            }catch (inputBoundException e){
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 
     private boolean isSpecialOperator(String text) {
@@ -133,7 +155,11 @@ public class GUI extends Application{
         displayArea.setFont(Font.font(25));
         GridPane.setColumnSpan(displayArea, 3);
         GridPane.setColumnSpan(border,3);
+        GridPane.setValignment(toggleBtn, VPos.BOTTOM);
+        GridPane.setHalignment(toggleBtn, HPos.RIGHT);
+
         grid.add(displayArea,2,0);
+        grid.add(toggleBtn,4,0);
         grid.add(border,2,0);
 
     }

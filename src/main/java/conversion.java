@@ -39,7 +39,6 @@ public class conversion {
             quotient = (int) Math.floor(quotient/4);
             sb.append(remainder);
         }
-
         return Integer.parseInt(String.valueOf(sb.reverse()));
     }
 
