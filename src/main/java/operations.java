@@ -8,6 +8,7 @@ public class operations {
     }
 
 
+
     public int add(int i, int i1) throws inputBoundException {
         conversion Conversion = new conversion();
         int decimal1 = Conversion.convert4To10(i);
@@ -33,6 +34,8 @@ public class operations {
         return Conversion.convert10To4(division);
     }
 
+
+
     public int pow(int i) throws inputBoundException {
         conversion Conversion = new conversion();
 
@@ -43,9 +46,25 @@ public class operations {
 
     public int rad(int i) throws inputBoundException {
         conversion Conversion = new conversion();
-        int decimal = Conversion.convert10To4(i);
+        int decimal = Conversion.convert4To10(i);
         int squareRoot = (int) Math.sqrt(decimal);
-        
+
         return Conversion.convert10To4(squareRoot);
+    }
+
+    public int operate(String operator, int num1, int num2) throws inputBoundException {
+        return switch (operator) {
+            case "+" -> add(num1,num2);
+            case "-" -> subt(num1,num2);
+            case "/" -> div(num1,num2);
+            case "x" -> mult(num1,num2);
+            case "x²" -> pow(num1);
+            case "√" -> rad(num1);
+            default -> -1;
+        };
+    }
+
+    public boolean isNumeric(String str) {
+        return str.matches("-?\\d+");
     }
 }

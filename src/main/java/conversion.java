@@ -7,9 +7,8 @@ public class conversion {
         String[] inputToArray = inputToString.split("");
 
         if(inputToArray.length>5){
-            throw new inputBoundException("Invalid Input");
+            throw new inputBoundException("Input too long");
         }
-
         int sum = 0;
         int count = 0;
 
@@ -17,15 +16,15 @@ public class conversion {
             String digit = inputToArray[i];
 
             if(!(digit.equals("0")||digit.equals("1")||digit.equals("2")||digit.equals("3"))){
-                throw new inputBoundException("Invalid Quaternary Number");
+                throw new inputBoundException("Invalid Quaternary Number:" + digit);
             }
-
             sum += (int) (Integer.parseInt(inputToArray[i]) * Math.pow(4,count));
             count++;
         }
 
         return sum;
     }
+
 
     public int convert10To4(int decimalNumber) throws inputBoundException{
         if((decimalNumber<0 || Integer.toString(decimalNumber).split("").length>5)){
