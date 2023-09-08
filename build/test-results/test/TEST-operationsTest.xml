@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="operationsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-08T19:33:47" hostname="yabetss-air.dhcp.bsu.edu" time="0.007">
+<testsuite name="operationsTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-09-08T19:42:22" hostname="yabetss-air.dhcp.bsu.edu" time="0.013">
   <properties/>
-  <testcase name="testOperateAdd()" classname="operationsTest" time="0.007"/>
+  <testcase name="testIsNumeric()" classname="operationsTest" time="0.006"/>
+  <testcase name="testDiv()" classname="operationsTest" time="0.001"/>
+  <testcase name="testPow()" classname="operationsTest" time="0.0"/>
+  <testcase name="testRad()" classname="operationsTest" time="0.0"/>
+  <testcase name="testMult()" classname="operationsTest" time="0.0"/>
+  <testcase name="testOperateAdd()" classname="operationsTest" time="0.0"/>
+  <testcase name="testOperateDiv()" classname="operationsTest" time="0.001"/>
+  <testcase name="testOperatePow()" classname="operationsTest" time="0.0"/>
+  <testcase name="testOperateRad()" classname="operationsTest" time="0.0"/>
+  <testcase name="testOperateSub()" classname="operationsTest" time="0.001"/>
+  <testcase name="testOperateMult()" classname="operationsTest" time="0.0"/>
+  <testcase name="testAddition()" classname="operationsTest" time="0.0"/>
+  <testcase name="testIsNotNumeric()" classname="operationsTest" time="0.0"/>
+  <testcase name="subtractionTest()" classname="operationsTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

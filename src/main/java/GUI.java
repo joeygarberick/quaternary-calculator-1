@@ -72,7 +72,7 @@ public class GUI extends Application{
             mem.setMemory(mem.getFirst(), Integer.parseInt(displayArea.getText()), mem.getOperation());
         } else if (isOperator(buttonText)) {
             handleOperatorButtonClick(buttonText);
-        } else if (isSpecialOperator(buttonText)) {
+        } else if (isSpecialOperator(buttonText)&&!displayArea.getText().isEmpty()) {
             handleSpecialOperation(buttonText);
         } else if (buttonText.equals("=")) {
             handleEqualsButtonClick();
