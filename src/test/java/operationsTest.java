@@ -38,7 +38,7 @@ public class operationsTest {
 
     @Test
     void testRad() throws inputBoundException{
-        int result = op.rad(100,2);
+        int result = op.rad(100);
         assertEquals(10,result);
     }
 

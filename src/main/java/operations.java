@@ -28,7 +28,7 @@ public class operations {
         conversion Conversion = new conversion();
         int decimal1 = Conversion.convert4To10(i);
         int decimal2 = Conversion.convert4To10(i1);
-        int division = decimal / decimal2;
+        int division = decimal1 / decimal2;
         
         return Conversion.convert10To4(division);
     }
@@ -41,8 +41,8 @@ public class operations {
         return Conversion.convert10To4(squared);
     }
 
-    public int rad(int i, int i1) throws inputBoundException {
-        conversion Conversion = new conversion(0);
+    public int rad(int i) throws inputBoundException {
+        conversion Conversion = new conversion();
         int decimal = Conversion.convert10To4(i);
         int squareRoot = (int) Math.sqrt(decimal);
         
