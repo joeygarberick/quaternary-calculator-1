@@ -209,12 +209,14 @@ public class GUI extends Application{
     }
     private void createOperationButtons(GridPane grid){
         setButtonsStyle("Verdana",FontWeight.BOLD,Color.DARKGRAY,20,addBtn,subBtn,mulBtn,divBtn,eqBtn);
-        setButtonsStyle("Verdana",FontWeight.BOLD,Color.DARKGRAY,10,powBtn,sqrtBtn);
+        setButtonsStyle("Verdana",FontWeight.BOLD,Color.DARKGRAY,13,powBtn,sqrtBtn);
         setButtonsStyle("Verdana",FontWeight.BOLD,Color.rgb(255,170,170),20,clearBtn);
         setButtonsSize(70,70,addBtn,subBtn,mulBtn,divBtn);
-        setButtonsSize(30,70,powBtn,sqrtBtn);
+        setButtonsSize(45,70,powBtn,sqrtBtn);
         setButtonsSize(150,70,eqBtn,clearBtn);
 
+        GridPane.setColumnSpan(sqrtBtn,2);
+        GridPane.setColumnSpan(powBtn,2);
 
         GridPane.setValignment(addBtn, VPos.TOP);
         GridPane.setValignment(subBtn, VPos.BOTTOM);
