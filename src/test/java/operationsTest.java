@@ -42,5 +42,49 @@ public class operationsTest {
         assertEquals(10,result);
     }
 
+    @Test
+    void testOperateAdd() throws inputBoundException{
+        int result = op.operate("+",1,1);
+        assertEquals(2,result);
+    }
+    @Test
+    void testOperateSub() throws inputBoundException{
+        int result = op.operate("-",20,1);
+        assertEquals(13,result);
+    }
+
+    @Test
+    void testOperateMult() throws inputBoundException{
+        int result = op.operate("-",20,1);
+        assertEquals(13,result);
+    }
+    @Test
+    void testOperateDiv() throws inputBoundException{
+        int result = op.operate("/",222,13);
+        assertEquals(12,result);
+    }
+    @Test
+    void testOperatePow() throws inputBoundException{
+        int result = op.operate("x²",10,0);
+        assertEquals(100,result);
+    }
+    @Test
+    void testOperateRad() throws inputBoundException{
+        int result = op.operate("√",12,0);
+        assertEquals(2,result);
+    }
+
+    @Test
+    void testIsNumeric() throws inputBoundException{
+        boolean result = op.isNumeric("24");
+        assertEquals(true,result);
+    }
+
+    @Test
+    void testIsNotNumeric() throws inputBoundException{
+        boolean result = op.isNumeric("24sd");
+        assertEquals(false,result);
+    }
+
 
 }
